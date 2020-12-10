@@ -8,105 +8,90 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     exit;
 }
 ?>
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
-        body{ font: 14px sans-serif; text-align: center; }
-		
-		.jumbotron {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  margin-bottom: 0;
-  background-color: #fff;
-}
-@media (min-width: 768px) {
-  .jumbotron {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-}
-
-.jumbotron p:last-child {
-  margin-bottom: 0;
-}
-
-.jumbotron h1 {
-  font-weight: 300;
-}
-
-.jumbotron .container {
-  max-width: 40rem;
-}
-
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
-
-		
+        body{ font: 14px sans-serif; }
+        .wrapper{ width: 350px; padding: 20px; }
+		.footer1 {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+		text-align: center;}
     </style>
+	
+	<link href="/assets/img/7.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
 </head>
 <body>
-    <div class="page-header">
-	<div style="align:right; width:100%;">
-        <h6 align="right">Welcome <br><b><?php echo htmlspecialchars($_SESSION["username"]); ?></b><br> to our site of money.
-    <br>
-        <a href="reset-password.php" >Reset Your Password</a> /
-        <a href="logout.php" >Sign Out of Your Account</a>
-    </h6>
-	</div>
-	
-	</div>
-	<div class="album py-5 bg-light">
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="../index.php">Invest-tech </a></h1>
+     
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="../index.php">Home</a></li>
+          <li><a href="logout.php">Logout</a></li>
+          
+        </ul>
+      </nav><!-- .nav-menu -->
+
+
+    </div>
+  </header>
+<div align="center">
+<br><br><br><br><br><br>
+    <div  align="center" >
     <div class="container">
 	
-	<h3><b>Chawe what what</b></h3>
 	
-	    <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="35" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-			<title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Vision</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="35" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-			<title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Mission</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-             
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-2 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="35" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-			<title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Services</text></svg>
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-             
-            </div>
-          </div>
-        </div> </div> </div>
-	</div>
 	
-    <p>
+	    <h2>Welcome <?php echo htmlspecialchars($_SESSION["username"]); ?></h2>
+		 <p>
         <a href="file-upload-form.php" class="btn btn-success">Upload proof of payment</a>
         <a href="mysql-select-query.php" class="btn btn-primary">View trasection history</a>
     </p	>
+	</div>
+		
+	</div>
+	 <div class="footer1">
+	   <footer id="footer">
+
+    
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Invest-tech</span></strong>. All Rights Reserved
+      </div>
+	 
+      <div class="credits">
+        
+        Designed by theGreat
+      </div>
+    </div>
+  </footer>	
+  </div>
 </body>
 </html>

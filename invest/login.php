@@ -112,13 +112,19 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
     <style type="text/css">
         body{ font: 14px sans-serif; }
         .wrapper{ width: 350px; padding: 20px; }
+		.footer1 {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+		text-align: center;}
     </style>
 	
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
 	<link href="/assets/img/7.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -134,23 +140,23 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-	
+
 </head>
 <body>
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="../index.html">Invest-tech </a></h1>
+      <h1 class="logo mr-auto"><a href="../index.php">Invest-tech </a></h1>
      
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="../index.html">Home</a></li>
-          <li><a href="../index.html">About</a></li>
-          <li><a href="../index.html">Services</a></li>
-          <li><a href="../index.html">Team</a></li>
+          <li class="active"><a href="../index.php">Home</a></li>
+          <li><a href="../index.php">About</a></li>
+          <li><a href="../index.php">Services</a></li>
+          <li><a href="../index.php">Team</a></li>
           
-          <li><a href="../index.html">Contact</a></li>
+          <li><a href="../index.php">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -159,6 +165,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     </div>
   </header>
 <div align="center">
+<br><br><br><br><br><br>
     <div class="wrapper" align="center">
         <h2>Login</h2>
         <p>Please fill in your credentials to login.</p>
@@ -180,5 +187,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         </form>
     </div>    
 	 </div> 
+	 <div class="footer1">
+	   <footer id="footer">
+
+    
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Invest-tech</span></strong>. All Rights Reserved
+      </div>
+	 
+      <div class="credits">
+        
+        Designed by theGreat
+      </div>
+    </div>
+  </footer>	
+  </div>
 </body>
 </html>

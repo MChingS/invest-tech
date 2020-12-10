@@ -1,5 +1,12 @@
 <?php
 // Include config file
+session_start();
+ 
+// Check if the user is already logged in, if yes then redirect him to welcome page
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+  header("location: welcome.php");
+  exit;
+}
 require_once "config.php";
  
 // Define variables and initialize with empty values
@@ -107,7 +114,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <head>
     <meta charset="UTF-8">
     <title>Create Account</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css">
+    
 	<link href="/assets/img/7.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -140,17 +147,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="../index.html">Invest-tech </a></h1>
+      <h1 class="logo mr-auto"><a href="../index.php">Invest-tech </a></h1>
      
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="../index.html">Home</a></li>
-          <li><a href="../index.html">About</a></li>
-          <li><a href="../index.html">Services</a></li>
-          <li><a href="../index.html">Team</a></li>
+          <li class="active"><a href="../index.php">Home</a></li>
+          <li><a href="../index.php">About</a></li>
+          <li><a href="../index.php">Services</a></li>
+          <li><a href="../index.php">Team</a></li>
           
-          <li><a href="../index.html">Contact</a></li>
+          <li><a href="../index.php">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
@@ -206,7 +213,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <p>Already have an account? <a href="login.php">Login here</a>.</p>
         </form>
     </div>  </div> 
-<div class="footer1">
 	   <footer id="footer">
 
     
@@ -218,10 +224,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 	 
       <div class="credits">
         
-        Designed by theGtrat
+        Designed by theGreat
       </div>
     </div>
   </footer>	
-  </div>
 </body>
 </html>
